@@ -1,0 +1,303 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/ico" href="{%static 'Images\ballred.png'%}" />
+    <link rel="stylesheet" href="{%static 'Style/navbar3_style.css'%}" />
+    <link rel="stylesheet" href="{%static 'Style/aboutPer_Style.css'%}" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Lora|Ubuntu:300,400,700&display=swap"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css?family=Abel:300,400,700"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Baumans:wght@500"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="{%static 'Style/footer_style.css'%}" />
+    <style>
+      @font-face {
+        font-family: lobster;
+        src: url("{%static 'font/Lobster-Regular.ttf' %}");
+      }
+      @font-face {
+        font-family: RobotoCondensed;
+        src: url("{%static 'font/RobotoCondensed-Bold.ttf' %}");
+      }
+      
+    </style>
+    <title>Basketball Geek | About PER</title>
+  </head>
+  <body>
+    <header>
+      <div class="logo-holder">
+        <img src="{%static 'Images/ballred.png'%}" alt="" class="header-logo" />
+      </div>
+
+      <input type="checkbox" class="nav-toggle" id="nav-toggle" />
+      <nav class="nav-main">
+        <ul>
+          <li><a href="/" class="n1">HOME</a></li>
+          <li class="n2"><a href="/calculator">CALCULATOR</a></li>
+          <li class="n3"><a href="/about_per">ABOUT PER</a></li>
+          <li class="n4"><a href="/contact_us">CONTACT US</a></li>
+        </ul>
+      </nav>
+      <label for="nav-toggle" class="nav-toggle-label"
+        ><span><i class="fa fa-bars" aria-hidden="true"></i> </span
+      ></label>
+      <nav class="logo-before">
+        <ul>
+          <li><a href="/">HOME</a></li>
+          <li><a href="/calculator">CALCULATOR</a></li>
+        </ul>
+      </nav>
+      <nav class="logo-after">
+        <ul>
+          <li><a href="/about_per">ABOUT PER</a></li>
+          <li><a href="/contact_us">CONTACT US</a></li>
+        </ul>
+      </nav>
+      <div class="icon1">
+        <i class="fa fa-facebook-official" aria-hidden="true"></i>
+      </div>
+      <div class="icon2"><i class="fa fa-youtube" aria-hidden="true"></i></div>
+      <div class="icon3"><i class="fa fa-twitter" aria-hidden="true"></i></div>
+
+      <input type="checkbox" class="search-toggle" id="search-toggle" />
+      <div class="searchbar">
+        <input type="text" placeholder="Search" class="searchbar-input" />
+      </div>
+      <div class="search">
+        <label for="search-toggle" class="search-toggle-label"
+          ><span> <i class="fa fa-search" aria-hidden="true"></i></span
+        ></label>
+      </div>
+    </header>
+
+    <main>
+      <p class="main-heading">PLAYER EFFICIENCY RATING</p>
+      <p class="main-content">
+        The <strong>Player Efficiency Rating</strong> (PER) is a per-minute
+        rating developed by
+        <a href="https://www.espn.in/nba/">ESPN.com</a> columnist
+        <a href="https://en.wikipedia.org/wiki/John_Hollinger">John Hollinger</a
+        >. In John's words, "The PER sums up all a player's positive
+        accomplishments, subtracts the negative accomplishments, and returns a
+        per-minute rating of a player's performance." It appears from his books
+        that John's database only goes back to the 1988-89 season.
+      </p>
+      <p class="main-sub-heading">Problems with PER</p>
+      <p class="main-sub-content">
+        <strong>PER</strong> largely measures offensive performance. Hollinger freely admits that
+        two of the defensive statistics it incorporates—<strong>blocks and steals</strong> (which
+        was not tracked as an official stat until 1973)—can produce a distorted
+        picture of a player's value and that PER is not a reliable measure of a
+        player's defensive acumen. For example, <a href="https://en.wikipedia.org/wiki/Bruce_Bowen">Bruce Bowen</a>, widely regarded as
+        one of the best defenders in the <strong>NBA</strong> through the 2006–07 season,
+        routinely posted single-digit PERs.
+      </p>
+
+      <p class="main-sub-heading">Reference Guide</p>
+      <div class="table-holder">
+        <table class="main-reference-table">
+          <tr>
+            <td>All-time great season</td>
+            <td>35.0+</td>
+          </tr>
+          <tr>
+            <td>Runaway MVP candidate</td>
+            <td>30.0–35.0</td>
+          </tr>
+          <tr>
+            <td>Strong MVP candidate</td>
+            <td>27.5–30.0</td>
+          </tr>
+          <tr>
+            <td>Weak MVP candidate</td>
+            <td>25.0–27.5</td>
+          </tr>
+          <tr>
+            <td>Definite All-Star</td>
+            <td>22.5–25.0</td>
+          </tr>
+          <tr>
+            <td>Borderline All-Star</td>
+            <td>20.0–22.5</td>
+          </tr>
+          <tr>
+            <td>Second offensive option</td>
+            <td>18.0–20.0</td>
+          </tr>
+          <tr>
+            <td>Third offensive option</td>
+            <td>16.5–18.0</td>
+          </tr>
+          <tr>
+            <td>Slightly above-average player</td>
+            <td>15.0–16.5</td>
+          </tr>
+          <tr>
+            <td>Rotation player</td>
+            <td>13.0–15.0</td>
+          </tr>
+          <tr>
+            <td>Non-rotation player</td>
+            <td>11.0–13.0</td>
+          </tr>
+          <tr>
+            <td>Fringe roster player</td>
+            <td>9.0–11.0</td>
+          </tr>
+          <tr>
+            <td>Player who won't stick in the league</td>
+            <td>0–9.0</td>
+          </tr>
+        </table>
+      </div>
+      <p class="main-sub-heading">Career PER Leaders</p>
+      <div class="table-holder">
+        <table>
+          <tr>
+            <th>Rank</th>
+            <th>Player</th>
+            <th>PER</th>
+          </tr>
+          <tr>
+            <td>1.</td>
+            <td>Michael Jordan</td>
+            <td>27.91</td>
+          </tr>
+          <tr>
+            <td>2.</td>
+            <td>LeBron James</td>
+            <td>27.49</td>
+          </tr>
+          <tr>
+            <td>3.</td>
+            <td>Anthony Davis</td>
+            <td>27.42</td>
+          </tr>
+          <tr>
+            <td>4.</td>
+            <td>Shaquille O'Neal</td>
+            <td>26.43</td>
+          </tr>
+          <tr>
+            <td>5.</td>
+            <td>David Robinson</td>
+            <td>26.18</td>
+          </tr>
+          <tr>
+            <td>6.</td>
+            <td>Wilt Chamberlain</td>
+            <td>26.13</td>
+          </tr>
+          <tr>
+            <td>7.</td>
+            <td>Bob Pettit</td>
+            <td>25.34</td>
+          </tr>
+          <tr>
+            <td>8.</td>
+            <td>Kevin Durant</td>
+            <td>25.20</td>
+          </tr>
+          <tr>
+            <td>9.</td>
+            <td>Chris Paul</td>
+            <td>25.08</td>
+          </tr>
+          <tr>
+            <td>10.</td>
+            <td>James Harden</td>
+            <td>24.84</td>
+          </tr>
+          <tr>
+            <td>11.</td>
+            <td>Neil Johnston</td>
+            <td>24.69</td>
+          </tr>
+          <tr>
+            <td>12.</td>
+            <td>Charles Barkley</td>
+            <td>24.63</td>
+          </tr>
+          <tr>
+            <td>13.</td>
+            <td>Kareem Abdul-Jabbar</td>
+            <td>24.58</td>
+          </tr>
+          <tr>
+            <td>14.</td>
+            <td>Tim Duncan</td>
+            <td>24.22</td>
+          </tr>
+          <tr>
+            <td>15.</td>
+            <td>Magic Johnson</td>
+            <td>24.11</td>
+          </tr>
+        </table>
+      </div>
+    </main>
+    
+    <footer>
+      <div class="footer-top">
+          <h1 class="footer-top-name">Basketball Geek</h1>
+          <h3 class="footer-top-nav">
+             <a href="/">HOME</a> .
+             <a href="/calculator">CALCULATOR</a> .
+             <a href="/about_per">ABOUT PER</a> .
+             <a href="/contact_us">ABOUT US</a>  
+           </h3>
+        
+          <p class="footer-top-copyright">
+              copyright&copy; 2020 <a href="/">basketballgeek.com</a>
+          </p>
+      </div>
+      <div class="footer-middle">
+          <ul class="footer-middle-icons">
+              <li><i class="fa fa-map-marker" aria-hidden="true"></i>
+                  &nbsp; Bangalore, Karnataka.</li>
+              <li><i class="fa fa-envelope" aria-hidden="true"></i>
+                  &nbsp; contact.us@basketballgeek.com</li>
+              <li><i class="fa fa-phone" aria-hidden="true"></i>
+                  &nbsp; +91 9576916347</li>
+          </ul>
+        
+      </div>
+      <div class="footer-last">
+          <h3 class="footer-last-name">ABOUT THE COMPANY</h3>
+          <p class="footer-last-para">The Basketball Geek provides a platform to the basketball youth to analyse their performance 
+            by NBA like metrics.</p>
+          <ul class="footer-last-icons">
+              <li><i class="fa fa-youtube" aria-hidden="true"></i></li>
+              <li><i class="fa fa-facebook-official" aria-hidden="true"></i></li>
+              <li><i class="fa fa-twitter" aria-hidden="true"></i></li>
+              <li><i class="fa fa-instagram" aria-hidden="true"></i></li>
+          </ul>
+      </div>
+      </div>
+  </footer>
+  </body>
+</html>

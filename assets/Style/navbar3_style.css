@@ -1,0 +1,256 @@
+:root {
+  --background: rgba(0, 0, 0, 0.7);
+}
+
+header {
+  position: sticky;
+  top: 0;
+  background-color: black;
+  height: 100px;
+  text-align: center;
+  width: 100%;
+  z-index: 999;
+}
+
+.icon1,
+.icon2,
+.icon3 {
+  opacity: 0;
+}
+.logo-before,
+.logo-after {
+  opacity: 0;
+  z-index: 1;
+}
+
+.header-logo {
+  margin: 2px auto;
+  min-width: 6em;
+  max-width: 8em;
+}
+nav {
+  position: absolute;
+  text-align: center;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 1);
+  transform: scale(1, 0);
+  transform-origin: top;
+  transition: transform 400ms ease-in-out;
+  border-top: dashed white 3px;
+
+  z-index: 99;
+}
+nav li {
+  display: flex;
+  margin-right: 38px;
+  justify-content: center;
+  list-style: none;
+}
+nav a {
+  opacity: 0;
+  transition: opacity 150ms ease-in-out;
+  text-decoration: none;
+  font-family: "abel";
+  font-size: 2em;
+  color: #c11613;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+nav a:hover,
+nav a:focus {
+  color: white;
+  border-bottom: #c11613 2px solid;
+}
+.nav-toggle,
+.search-toggle {
+  display: none;
+}
+.nav-toggle-label {
+  color: white;
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-size: 1.6em;
+  margin-left: 1em;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+.nav-toggle-label:hover,
+.nav-toggle-label:focus {
+  color: #c11613;
+}
+.search {
+  grid-area: s;
+  color: white;
+  font-size: 35px;
+}
+.search:hover,
+.search:focus {
+  color: #c11613;
+}
+.searchbar {
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 20px;
+  width: 100%;
+  top: 100%;
+  display: grid;
+  place-items: center;
+  opacity: 0;
+  transition: opacity 150ms ease-in-out;
+  z-index: -10;
+}
+.searchbar-input {
+  width: 90%;
+  height: 38px;
+  border-radius: 5%;
+  font-size: 1.2em;
+  font-family: abel;
+}
+.search-toggle-label {
+  position: absolute;
+  right: 0;
+  top: 0;
+  font-size: 0.8em;
+  margin-right: 1em;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+.nav-toggle:checked ~ nav {
+  transform: scale(1, 1);
+}
+.nav-toggle:checked ~ nav a {
+  opacity: 1;
+  transition: opacity 250ms ease-in-out 250ms;
+}
+
+.search-toggle-label {
+  margin-left: 1em;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+.search-toggle:checked ~ .searchbar {
+  transform: scale(1, 1);
+}
+.search-toggle:checked ~ .searchbar {
+  opacity: 1;
+  transition: opacity 250ms ease-in-out 250ms;
+}
+@media screen and (min-width: 700px) {
+  .nav-toggle-label {
+    display: none;
+  }
+  header {
+    border-bottom-right-radius: 7%;
+    border-bottom-left-radius: 7%;
+    position: fixed;
+    height: 160px;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 1);
+    display: grid;
+    grid-column-gap: 1px;
+    grid-template-columns: 18px 30px repeat(3, 70px) repeat(2, 30px) 400px 125px 450px repeat(
+        3,
+        100px
+      );
+
+    grid-template-areas: ". . l1 l2 l3 . . before l after s s .";
+    place-items: center;
+  }
+
+  .nav-main {
+    opacity: 0;
+  }
+  nav {
+    all: unset;
+    display: flex;
+  }
+  nav a {
+    opacity: 1;
+    color: white;
+  }
+  .logo-holder {
+    grid-area: l;
+  }
+  nav a .n1 {
+    grid-area: n1;
+  }
+  .logo-before,
+  .logo-after {
+    opacity: 1;
+  }
+  .logo-before ul,
+  .logo-after ul {
+    display: flex;
+    margin-bottom: 70px;
+  }
+  .logo-before a,
+  .logo-after a {
+    font-size: 1.9em;
+    color: #df0e02;
+    font-weight: 700;
+    text-shadow: 2px 2px #83243d;
+  }
+  .logo-before ul {
+    margin-right: 59px;
+  }
+  .logo-after ul {
+    margin-left: 40px;
+  }
+  .logo-before {
+    grid-area: before;
+  }
+  .logo-after {
+    grid-area: after;
+  }
+  .header-logo {
+    max-width: 13em;
+    min-width: 13em;
+    margin-top: 0;
+    padding-bottom: 60px;
+  }
+  .icon1,
+  .icon2,
+  .icon3 {
+    z-index: 80;
+    opacity: 1;
+    color: #c11613;
+    font-size: 1.3em;
+    margin-bottom: 50px;
+    border: #c11613 solid 3px;
+    border-radius: 50%;
+    padding: 10px;
+  }
+  .icon1:hover,
+  .icon2:hover,
+  .icon3:hover {
+    color: white;
+    border-color: black;
+    background-color: #c11613;
+  }
+  .icon1 {
+    grid-area: l1;
+  }
+  .icon2 {
+    grid-area: l2;
+  }
+  .icon3 {
+    grid-area: l3;
+  }
+  .search {
+    position: relative;
+    grid-area: s;
+    margin-bottom: 50px;
+    color: #c11613;
+    font-size: 3em;
+    margin-left: 100px;
+  }
+  .search:hover {
+    color: white;
+  }
+}

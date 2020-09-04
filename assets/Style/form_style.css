@@ -1,0 +1,182 @@
+/* Style the form */
+@font-face {
+  font-family: lobster;
+  src: url("..//font/Lobster-Regular.ttf");
+}
+@font-face {
+  font-family: RobotoCondensed;
+  src: url("..//font/RobotoCondensed-Bold.ttf");
+}
+
+body {
+  background: #b92b27; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to top,
+    #1565c0,
+    #b92b27
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to top,
+    #1565c0,
+    #b92b27
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+.form-holder {
+  width: 90%;
+  margin-top: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 40px;
+
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+}
+.search-input {
+  border-bottom-style: none;
+  border: 1px black solid;
+  background-color: white;
+}
+#regForm {
+  background-color: rgba(255, 255, 255, 0.8);
+  margin: 0;
+  padding: 10px;
+
+  border-radius: 5%;
+  animation: transitionIn 0.75s;
+}
+
+/* Style the input fields */
+.form-title {
+  font-family: "Baumans";
+  font-weight: bold;
+  font-size: 2.2rem;
+  margin-bottom: 0;
+  text-align: center;
+  color: rgb(187, 35, 35);
+}
+strong {
+  font-weight: 900;
+}
+.form-label {
+  font-family: "Montserrat";
+  font-size: 1.1rem;
+  margin-top: 30px;
+  color: #c11613;
+  font-weight: 500;
+}
+input {
+  outline: none;
+  background-color: rgba(0, 0, 0, 0);
+  padding: 3px;
+  width: 100%;
+  font-size: 1.1rem;
+  font-family: "abel";
+
+  border: none;
+  border-bottom: 2px solid black;
+  border-radius: 6%;
+  margin-top: 1px;
+  animation: transitionIn 3s;
+}
+input:active,
+input:focus {
+  border-color: #dd1818;
+}
+/* Mark input boxes that gets an error on validation: */
+input.invalid {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+.form-button-position {
+  text-align: center;
+}
+.form-next,
+.form-previous {
+  background-color: #c41916;
+  border-radius: 20px;
+  cursor: pointer;
+  color: #ffffff;
+  font-family: "Baumans";
+  font-size: 1.3rem;
+  font-weight: bolder;
+  padding: 8px 17px;
+  text-decoration: none;
+  border: none;
+  margin-top: 15px;
+  margin-right: 4px;
+  margin-left: 4px;
+}
+.form-next:hover,
+.form-previous:hover {
+  background-color: black;
+}
+.fa fa-chevron-right {
+  color: white;
+}
+/* Hide all steps by default: */
+.tab {
+  display: none;
+  margin: 30px 20px;
+}
+
+/* Make circles that indicate the steps of the form: */
+.step {
+  height: 15px;
+  width: 15px;
+  margin-left: 4px;
+  margin-right: 4px;
+  margin-top: 0;
+  margin-bottom: 20px;
+  background-color: #bbbbbb;
+  border: none;
+  border-radius: 50%;
+  display: inline-block;
+  opacity: 0.5;
+}
+
+/* Mark the active step: */
+.step.active {
+  opacity: 1;
+}
+
+/* Mark the steps that are finished and valid: */
+.step.finish {
+  background-color: #d86f6f;
+}
+@keyframes transitionIn {
+  from {
+    opacity: 0;
+    transform: rotateX(-10deg);
+  }
+  to {
+    opacity: 1;
+    transform: rotateX(0);
+  }
+}
+@media screen and (min-width: 700px) {
+  .form-holder {
+    width: 90%;
+    margin-top: 200px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 40px;
+  }
+  #regForm {
+    padding: 10px;
+    width: 40%;
+  }
+  .tab {
+    margin: 30px 60px;
+  }
+}
+@media screen and (min-width: 700px) {
+  .form-next,
+  .form-previous {
+    background-color: #c41916;
+    border-radius: 20px;
+    font-size: 1.5rem;
+    padding: 9px 18px;
+  }
+}

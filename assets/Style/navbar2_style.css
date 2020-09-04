@@ -1,0 +1,129 @@
+:root {
+  --background: rgba(0, 0, 0, 0.7);
+}
+
+body {
+  margin: 0;
+  background-color: red;
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+header {
+  position: fixed;
+  height: 174px;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 1);
+  display: grid;
+  grid-column-gap: 1px;
+  grid-template-columns: repeat(3, 100px) 400px 125px 400px repeat(3, 100px);
+
+  grid-template-areas: "l1 l2 l3 b l a . s .";
+  place-items: center;
+}
+.header-logo {
+  max-width: 15em;
+  min-width: 15em;
+}
+.logo-holder {
+  grid-area: l;
+}
+.logo-before {
+  grid-area: b;
+  display: flex;
+  justify-self: end;
+  margin-right: 85px;
+}
+.logo-after {
+  grid-area: a;
+  justify-self: start;
+  margin-left: 40px;
+}
+ul {
+  display: flex;
+}
+ul li {
+  list-style: none;
+  margin: 10px;
+}
+ul a {
+  text-decoration: none;
+  font-size: 1.7rem;
+  font-family: abel;
+  color: #df0e02;
+  font-weight: 700;
+  text-shadow: 2px 2px #83243d;
+}
+ul a:hover {
+  border-bottom: solid white 2px;
+}
+
+.icon1:hover,
+.icon2:hover,
+.icon3:hover {
+  color: black;
+  border-color: black;
+  background-color: #c11613;
+}
+.icon1,
+.icon2,
+.icon3 {
+  color: #c11613;
+  font-size: 20px;
+  border: solid 3px #c11613;
+  padding: 12px;
+  border-radius: 50%;
+}
+.icon1 {
+  grid-area: l1;
+}
+.icon1 {
+  grid-area: l2;
+}
+.icon1 {
+  grid-area: l3;
+}
+.search {
+  grid-area: s;
+  color: #c11613;
+  font-size: 35px;
+}
+.search:hover {
+  color: white;
+}
+.searchbar {
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 20px;
+  width: 100%;
+  top: 174px;
+  display: grid;
+  place-items: center;
+  opacity: 0;
+  transition: opacity 150ms ease-in-out;
+}
+.searchbar-input {
+  width: 90%;
+  height: 30px;
+  border-radius: 5%;
+  font-size: 1.6em;
+  font-family: abel;
+}
+.nav-toggle {
+  display: none;
+}
+.nav-toggle-label {
+  margin-left: 1em;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+.nav-toggle:checked ~ .searchbar {
+  transform: scale(1, 1);
+}
+.nav-toggle:checked ~ .searchbar {
+  opacity: 1;
+  transition: opacity 250ms ease-in-out 250ms;
+}

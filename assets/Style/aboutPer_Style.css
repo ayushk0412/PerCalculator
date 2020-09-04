@@ -1,0 +1,128 @@
+@font-face {
+  font-family: lobster;
+  src: url("..//font/Lobster-Regular.ttf");
+}
+@font-face {
+  font-family: RobotoCondensed;
+  src: url("..//font/RobotoCondensed-Bold.ttf");
+}
+
+body {
+  margin: 0;
+  background: #b92b27; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to top,
+    #1565c0,
+    #b92b27
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to top,
+    #1565c0,
+    #b92b27
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+main {
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  width: 90%;
+  margin-top: 30px;
+  margin-bottom: 80px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 5px;
+  animation: transitionIn 1s;
+}
+.main-heading,
+.main-sub-heading {
+  color: #ca3131;
+}
+.main-heading {
+  font-size: 2.2rem;
+  font-family: "RobotoCondensed";
+  font-weight: 700;
+  text-align: left;
+  margin-top: 0;
+  padding-bottom: 7px;
+  border-bottom: 2px rgb(204, 202, 202) solid;
+}
+.main-sub-heading {
+  font-family: "RobotoCondensed";
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-align: left;
+  border-bottom: 2px rgb(204, 202, 202) solid;
+  margin-top: 15px;
+  padding-bottom: 5px;
+}
+
+.main-content,
+.main-sub-content {
+  font-family: "Ubuntu";
+  animation: transitionIn 2s;
+}
+.main-content {
+  font-size: 1.2rem;
+}
+.main-sub-content {
+  font-size: 1.1rem;
+}
+table,
+th,
+td {
+  border: 1px solid black;
+  font-family: Montserrat;
+  font-weight: 500;
+  padding: 4px;
+}
+th {
+  font-family: RobotoCondensed;
+}
+a {
+  text-decoration: none;
+  font-weight: 700;
+  color: rgb(0, 132, 255);
+}
+.table-holder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@keyframes transitionIn {
+  from {
+    opacity: 0;
+    transform: rotateX(-10deg);
+  }
+  to {
+    opacity: 1;
+    transform: rotateX(0);
+  }
+}
+
+@media screen and (min-width: 700px) and (orientation: landscape) {
+  main {
+    width: 60%;
+    margin-top: 200px;
+    margin-bottom: 80px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+  .main-sub-heading {
+    margin-top: 25px;
+    padding-bottom: 10px;
+  }
+  .table-holder {
+    justify-content: start;
+  }
+}

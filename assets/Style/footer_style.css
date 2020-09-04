@@ -1,0 +1,141 @@
+/*body {
+  margin: 0;
+}*/
+footer {
+  padding: 15px;
+  background-color: rgba(0, 0, 0, 1);
+  width: 100%;
+  text-align: center;
+  border-top: solid white 3px;
+}
+.footer-top-name {
+  font-family: lobster;
+}
+.footer-middle-icons i,
+.footer-top-nav a {
+  color: white;
+}
+.footer-top-name,
+.footer-last-name,
+.footer-middle-icons li,
+.footer-top-copyright,
+.footer-top-nav {
+  color: #c11613;
+}
+.footer-top,
+.footer-middle,
+.footer-last {
+  width: 80%;
+  margin: 0 auto;
+
+  text-align: center;
+}
+.footer-top-copyright a {
+  text-decoration: none;
+  color: #c11613;
+}
+
+.footer-top-nav a,
+.footer-middle-icons,
+.footer-last-para,
+.footer-last-name {
+  font-family: abel;
+}
+.footer-top-nav a {
+  text-decoration: none;
+}
+.footer-middle-icons {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  text-align: center;
+}
+.footer-middle-icons li {
+}
+.footer-last-name {
+  margin-bottom: 0;
+}
+.footer-last-para {
+  margin-top: 0;
+}
+.footer-last-para {
+  padding-right: 1.6em;
+  padding-left: 1.6em;
+  color: white;
+  font-size: 0.85em;
+}
+.footer-last-icons {
+  display: flex;
+
+  justify-content: center;
+}
+.footer-last-icons {
+  margin: 0 auto;
+  padding: 0;
+}
+.footer-middle-icons {
+  padding: 0;
+  font-weight: bolder;
+  align-items: center;
+}
+.footer-last-icons li,
+.footer-middle-icons li {
+  text-align: left;
+  list-style: none;
+  margin: 0.6em 0.2em;
+}
+
+.footer-last-icons i {
+  font-size: 1.2em;
+  padding: 12px;
+  border: solid #c11613 2.5px;
+  border-radius: 50%;
+  color: #c11613;
+}
+.footer-top-nav a:hover,
+.footer-middle-icons i:hover {
+  color: #c11613;
+}
+.footer-top-name:hover,
+.footer-last-icons i:hover,
+.footer-top-copyright a:hover {
+  color: white;
+}
+.footer-middle,
+.footer-last {
+  margin-top: 2em;
+}
+@media screen and (min-width: 700px) {
+  .footer-top,
+  .footer-middle,
+  .footer-last {
+    width: 33.3%;
+
+    text-align: center;
+  }
+
+  footer {
+    display: flex;
+    flex-direction: row;
+    padding: 2em 0;
+  }
+  .footer-last-name {
+    font-size: 1.5em;
+  }
+  .footer-last-para {
+    padding-right: 5em;
+    padding-left: 5em;
+    color: white;
+    font-size: 1em;
+    margin-top: 0.7em;
+  }
+  .footer-middle-icons {
+    padding: 0;
+    font-size: 1.3em;
+    align-items: center;
+  }
+  .footer-middle,
+  .footer-last {
+    margin-top: 0em;
+  }
+}

@@ -1,0 +1,208 @@
+:root {
+  --background: rgba(0, 0, 0, 0.7);
+}
+
+body {
+  margin: 0;
+  background-color: gold;
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+header {
+  background-color: var(--background);
+  text-align: center;
+  position: fixed;
+  width: 100%;
+  z-index: 999;
+}
+nav {
+  position: absolute;
+  text-align: center;
+  top: 100%;
+  left: 0;
+  background-color: var(--background);
+  width: 100%;
+  transform: scale(1, 0);
+  transform-origin: top;
+  transition: transform 400ms ease-in-out;
+}
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+nav li {
+  margin-bottom: 1em;
+  margin-left: 1em;
+}
+nav a {
+  color: #da661a;
+  font-size: 1.2em;
+  text-decoration: none;
+  font-family: "abel";
+  font-weight: bold;
+  opacity: 0;
+  transition: opacity 150ms ease-in-out;
+}
+nav a:hover,
+nav a:focus {
+  color: white;
+}
+
+.logo-holder {
+  /*display: flex; THIS IS FOR ADDING THE TITLE IN THE LOGO's SEQUENCE*/
+}
+.header-logo {
+  width: 7em;
+  min-width: 7em;
+}
+.header-name {
+  color: red;
+  font-family: "Lobster";
+  text-shadow: 4px 4px #801336;
+  margin: 4px 3px;
+}
+.nav-toggle {
+  display: none;
+}
+.nav-toggle-label {
+  color: white;
+  position: absolute;
+  left: 0;
+  top: 0;
+  margin-left: 1em;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+.nav-toggle-label span,
+.nav-toggle-label span::before,
+.nav-toggle-label span::after {
+  display: block;
+  height: 2px;
+  width: 2em;
+  background: white;
+  border-radius: 2px;
+  position: relative;
+}
+.nav-toggle-label span::before,
+.nav-toggle-label span::after {
+  content: "";
+  position: absolute;
+}
+.nav-toggle-label span::before {
+  bottom: 7px;
+}
+.nav-toggle-label span::after {
+  top: 7px;
+}
+.nav-toggle:checked ~ nav {
+  transform: scale(1, 1);
+}
+.nav-toggle:checked ~ nav a {
+  opacity: 1;
+  transition: opacity 250ms ease-in-out 250ms;
+}
+
+.repeat-bg {
+  display: block;
+  width: 100%;
+}
+@media screen and (min-width: 800px) {
+  .nav-toggle-label {
+    display: none;
+  }
+
+  header {
+    display: grid;
+    grid-template-columns: 1px auto minmax(600px, 1fr) 1px;
+  }
+  .logo-holder {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+    grid-column: 1 / span 2;
+  }
+  nav {
+    grid-column: 3 / 4;
+    all: unset;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+  nav a {
+    opacity: 1;
+  }
+  nav ul {
+    display: flex;
+    justify-content: flex-end;
+  }
+}
+/*
+@media screen and (min-width: 800px) {
+  .nav-toggle-label {
+    display: none;
+  }
+
+  header {
+    display: flex;
+    flex-direction: row;
+    background-color: var(--background);
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    z-index: 999;
+    justify-content: space-between;
+
+    align-items: center;
+  }
+  nav {
+    position: relative;
+    text-align: right;
+    width: 25%;
+    background: 0;
+    display: flex;
+    align-items: center;
+    opacity: 1;
+    all: unset;
+  }
+  .logo-holder {
+    display: flex;
+    flex-direction: row;
+    text-decoration: none;
+    width: 40%;
+    margin-left: 1em;
+  }
+  .header-logo {
+    width: 8em;
+    min-width: 8em;
+    height: 6em;
+    margin-top: 1em;
+    margin-top: 1em;
+
+    display: flex;
+  }
+  .header-name {
+    margin-top: 1.2em;
+  }
+
+  nav ul {
+    display: flex;
+    align-items: center;
+
+    margin-right: 1em;
+  }
+  nav li {
+    padding: 0;
+    margin-top: 1em;
+    margin-right: 0;
+  }
+  nav a {
+    opacity: 1;
+  }
+}
+*/

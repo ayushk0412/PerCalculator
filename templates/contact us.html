@@ -1,0 +1,166 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/ico" href="{%static 'Images\ballred.png'%}" />
+    <link rel="stylesheet" href="{%static 'Style/navbar3_style.css'%}" />
+    <link rel="stylesheet" href="{%static 'Style/contactus_style.css'%}" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Lora|Ubuntu:300,400,700&display=swap"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css?family=Abel:300,400,700"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Baumans:wght@500"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="{%static 'Style/footer_style.css'%}" />
+ <style>
+      @font-face {
+        font-family: lobster;
+        src: url("{%static 'font/Lobster-Regular.ttf' %}");
+      }
+      @font-face {
+        font-family: RobotoCondensed;
+        src: url("{%static 'font/RobotoCondensed-Bold.ttf' %}");
+      }
+      
+    </style>
+    <title>Basketball Geek | Contact Us</title>
+  </head>
+  <body>
+    <header>
+      <div class="logo-holder">
+        <img src="{%static 'Images/ballred.png'%}" alt="" class="header-logo" />
+      </div>
+
+      <input type="checkbox" class="nav-toggle" id="nav-toggle" />
+      <nav class="nav-main">
+        <ul>
+          <li><a href="/" class="n1">HOME</a></li>
+          <li class="n2"><a href="/calculator">CALCULATOR</a></li>
+          <li class="n3"><a href="/about_per">ABOUT PER</a></li>
+          <li class="n4"><a href="/contact_us">CONTACT US</a></li>
+        </ul>
+      </nav>
+      <label for="nav-toggle" class="nav-toggle-label"
+        ><span><i class="fa fa-bars" aria-hidden="true"></i> </span
+      ></label>
+      <nav class="logo-before">
+        <ul>
+          <li><a href="/">HOME</a></li>
+          <li><a href="/calculator">CALCULATOR</a></li>
+        </ul>
+      </nav>
+      <nav class="logo-after">
+        <ul>
+          <li><a href="/about_per">ABOUT PER</a></li>
+          <li><a href="/contact_us">CONTACT US</a></li>
+        </ul>
+      </nav>
+      <div class="icon1">
+        <i class="fa fa-facebook-official" aria-hidden="true"></i>
+      </div>
+      <div class="icon2"><i class="fa fa-youtube" aria-hidden="true"></i></div>
+      <div class="icon3"><i class="fa fa-twitter" aria-hidden="true"></i></div>
+
+      <input type="checkbox" class="search-toggle" id="search-toggle" />
+      <div class="searchbar">
+        <input type="text" placeholder="Search" class="searchbar-input" />
+      </div>
+      <div class="search">
+        <label for="search-toggle" class="search-toggle-label"
+          ><span> <i class="fa fa-search" aria-hidden="true"></i></span
+        ></label>
+      </div>
+    </header>
+
+    <main>
+        <p class="map-title map">Locate us on google maps</p>
+    <div class="main-map">
+       
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1374.8240126666763!2d77.61113302398435!3d12.934082659078364!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xc12c41d8c342ce04!2sForum%20Mall!5e0!3m2!1sen!2sin!4v1599074943976!5m2!1sen!2sin">
+        </iframe>
+    </div>
+    <p class="map-title feedback">Customer feedback form</p>   
+    <div class="container">
+        
+        <form action="">
+      
+          <p class="container-title">First Name</p>
+          <input class="container-input" type="text" placeholder="Your first name" name="" id="">
+          <p class="container-title">Last Name</p>
+          <input class="container-input" type="text" placeholder="Your last name" name="" id="">
+          <p class="container-title">Phone Number</p>
+          <input class="container-input" placeholder="Your phone number" type="text" name="" id="">
+          <p class="container-title">Email</p>
+          <input class="container-input" type="text" placeholder="Your email address" name="" id="">
+          <p class="container-title">Comments</p>
+          <textarea class="container-input-textarea" name="" id="" ></textarea>
+ <center>
+          <input class="container-submit" type="submit" value="Submit">
+      </center>
+        </form>
+
+</div>
+    </main>
+    
+    <footer>
+      <div class="footer-top">
+          <h1 class="footer-top-name">Basketball Geek</h1>
+          <h3 class="footer-top-nav">
+             <a href="/">HOME</a> .
+             <a href="/calculator">CALCULATOR</a> .
+             <a href="/about_per">ABOUT PER</a> .
+             <a href="/contact_us">ABOUT US</a>  
+           </h3>
+        
+          <p class="footer-top-copyright">
+              copyright&copy; 2020 <a href="/">basketballgeek.com</a>
+          </p>
+      </div>
+      <div class="footer-middle">
+          <ul class="footer-middle-icons">
+              <li><i class="fa fa-map-marker" aria-hidden="true"></i>
+                  &nbsp; Bangalore, Karnataka.</li>
+              <li><i class="fa fa-envelope" aria-hidden="true"></i>
+                  &nbsp; contact.us@basketballgeek.com</li>
+              <li><i class="fa fa-phone" aria-hidden="true"></i>
+                  &nbsp; +91 9576916347</li>
+          </ul>
+        
+      </div>
+      <div class="footer-last">
+          <h3 class="footer-last-name">ABOUT THE COMPANY</h3>
+          <p class="footer-last-para">The Basketball Geek provides a platform to the basketball youth to analyse their performance 
+            by NBA like metrics.</p>
+          <ul class="footer-last-icons">
+              <li><i class="fa fa-youtube" aria-hidden="true"></i></li>
+              <li><i class="fa fa-facebook-official" aria-hidden="true"></i></li>
+              <li><i class="fa fa-twitter" aria-hidden="true"></i></li>
+              <li><i class="fa fa-instagram" aria-hidden="true"></i></li>
+          </ul>
+      </div>
+      </div>
+  </footer>
+  </body>
+</html>

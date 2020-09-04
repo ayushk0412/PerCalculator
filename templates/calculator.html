@@ -1,0 +1,301 @@
+{%load static%}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/ico" href="{%static 'Images\ballred.png'%}" />
+    <link rel="stylesheet" href="{%static 'Style/navbar3_style.css'%}" />
+    <link rel="stylesheet" href="{%static 'Style/index_style.css'%}" />
+    <link rel="stylesheet" href="{%static 'Style/form_style.css'%}" />
+    <link rel="stylesheet" href="{%static 'Style/footer_style.css'%}" />
+    <link
+    href="https://fonts.googleapis.com/css?family=Baumans:wght@500"
+    rel="stylesheet"
+  />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap.css"
+      rel="stylesheet"
+    />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet"> 
+    
+    <link
+      href="https://fonts.googleapis.com/css?family=Abel:300,400,700"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="Style/EnterStats_style.css"/>
+    <style>
+      @font-face {
+        font-family: lobster;
+        src: url("{%static 'font/Lobster-Regular.ttf' %}");
+      }
+      @font-face {
+        font-family: RobotoCondensed;
+        src: url("{%static 'font/RobotoCondensed-Bold.ttf' %}");
+      }
+      
+    </style>
+    <title>Basketball Geek | Calculator
+    </title>
+  </head>
+  <body>
+    <header>
+      <div class="logo-holder">
+        <img src="{%static 'Images/ballred.png'%}" alt="" class="header-logo" />
+      </div>
+
+      <input type="checkbox" class="nav-toggle" id="nav-toggle" />
+      <nav class="nav-main">
+        <ul>
+          <li><a href="/" class="n1">HOME</a></li>
+          <li class="n2"><a href="/calculator">CALCULATOR</a></li>
+          <li class="n3"><a href="/about_per">ABOUT PER</a></li>
+          <li class="n4"><a href="/contact_us">CONTACT US</a></li>
+        </ul>
+      </nav>
+      <label for="nav-toggle" class="nav-toggle-label"
+        ><span><i class="fa fa-bars" aria-hidden="true"></i> </span
+      ></label>
+      <nav class="logo-before">
+        <ul>
+          <li><a href="/">HOME</a></li>
+          <li><a href="/calculator">CALCULATOR</a></li>
+        </ul>
+      </nav>
+      <nav class="logo-after">
+        <ul>
+          <li><a href="/about_per">ABOUT PER</a></li>
+          <li><a href="/contact_us">CONTACT US</a></li>
+        </ul>
+      </nav>
+      <div class="icon1">
+        <i class="fa fa-facebook-official" aria-hidden="true"></i>
+      </div>
+      <div class="icon2"><i class="fa fa-youtube" aria-hidden="true"></i></div>
+      <div class="icon3"><i class="fa fa-twitter" aria-hidden="true"></i></div>
+
+      <input type="checkbox" class="search-toggle" id="search-toggle" />
+      <div class="searchbar">
+        <input type="text" placeholder="Search" class="searchbar-input" />
+      </div>
+      <div class="search">
+        <label for="search-toggle" class="search-toggle-label"
+          ><span> <i class="fa fa-search" aria-hidden="true"></i></span
+        ></label>
+      </div>
+    </header>
+    <div class="form-holder">
+        <form id="regForm" action="/result/" method="POST" >
+          <h1 class="form-title"><strong>ENTER YOUR STATISTICS</strong></h1>
+  
+          <!-- One "tab" for each step in the form: -->
+          {%csrf_token%}
+          <div class="tab">
+            <p class="form-label">Minutes Played:</p>
+            <p>
+              <input
+                type="text"
+                name="minutes"
+                placeholder=""
+                oninput="this.className = ''"
+              />
+            </p>
+            <p class="form-label">Field Goals Attempted:</p>
+            <p>
+              <input
+                type="text"
+                name="fga"
+                placeholder=""
+                oninput="this.className = ''"
+              />
+            </p>
+            <p class="form-label">Field Goals Made:</p>
+            <p>
+              <input
+                type="text"
+                name="fgm"
+                placeholder=""
+                oninput="this.className = ''"
+              />
+            </p>
+            <p class="form-label">Three-Pointers Made:</p>
+            <p>
+              <input
+                type="text"
+                name="3pm"
+                placeholder=""
+                oninput="this.className = ''"
+              />
+            </p>
+          </div>
+  
+          <div class="tab">
+            <p class="form-label">Free Throws Attempted:</p>
+            <p>
+              <input
+                type="text"
+                name="fta"
+                placeholder=""
+                oninput="this.className = ''"
+              />
+            </p>
+            <p class="form-label">Free Throws Made:</p>
+            <p>
+              <input
+                type="text"
+                name="ftm"
+                placeholder=""
+                oninput="this.className = ''"
+              />
+            </p>
+            <p class="form-label">Assists:</p>
+            <p>
+              <input
+                type="text"
+                name="assists"
+                placeholder=""
+                oninput="this.className = ''"
+              />
+            </p>
+          </div>
+  
+          <div class="tab">
+            <p class="form-label">Steals:</p>
+            <p>
+              <input
+                type="text"
+                name="steals"
+                placeholder=""
+                oninput="this.className = ''"
+              />
+            </p>
+            <p class="form-label">Blocks:</p>
+            <p>
+              <input
+                type="text"
+                name="blocks"
+                placeholder=""
+                oninput="this.className = ''"
+              />
+            </p>
+            <p class="form-label">Offensive Rebounds:</p>
+            <p>
+              <input
+                type="text"
+                name="orb"
+                placeholder=""
+                oninput="this.className = ''"
+              />
+            </p>
+          </div>
+  
+          <div class="tab">
+            <p class="form-label">Defensive Rebounds:</p>
+            <p>
+              <input
+                type="text"
+                name="drb"
+                placeholder=""
+                oninput="this.className = ''"
+              />
+            </p>
+            <p class="form-label">Fouls:</p>
+            <p>
+              <input
+                type="text"
+                name="fouls"
+                placeholder=""
+                oninput="this.className = ''"
+              />
+            </p>
+            <p class="form-label">Turnovers:</p>
+            <p>
+              <input
+                type="text"
+                name="tov"
+                placeholder=""
+                oninput="this.className = ''"
+              />
+            </p>
+          </div>
+  
+          <div class="form-button-position">
+            <div style="">
+              <button
+                class="form-previous"
+                type="button"
+                id="prevBtn"
+                onclick="nextPrev(-1)"
+              >
+                Previous
+              </button>
+              <button
+                class="form-next"
+                type="button"
+                id="nextBtn"
+                onclick="nextPrev(1)"
+              >
+              Next
+             
+
+              </button>
+              
+            </div>
+          </div>
+  
+          <!-- Circles which indicates the steps of the form: -->
+          <div style="text-align: center; margin-top: 40px">
+            <span class="step"></span>
+            <span class="step"></span>
+            <span class="step"></span>
+            <span class="step"></span>
+          </div>
+        </form>
+      </div>
+      <script src="{%static 'Script/form.js'%}"></script>
+
+    <footer>
+      <div class="footer-top">
+          <h1 class="footer-top-name">Basketball Geek</h1>
+          <h3 class="footer-top-nav">
+             <a href="/">HOME</a> .
+             <a href="/calculator">CALCULATOR</a> .
+             <a href="/about_per">ABOUT PER</a> .
+             <a href="/contact_us">ABOUT US</a>  
+           </h3>
+        
+          <p class="footer-top-copyright">
+              copyright&copy; 2020 <a href="/">basketballgeek.com</a>
+          </p>
+      </div>
+      <div class="footer-middle">
+          <ul class="footer-middle-icons">
+              <li><i class="fa fa-map-marker" aria-hidden="true"></i>
+                  &nbsp; Bangalore, Karnataka.</li>
+              <li><i class="fa fa-envelope" aria-hidden="true"></i>
+                  &nbsp; contact.us@basketballgeek.com</li>
+              <li><i class="fa fa-phone" aria-hidden="true"></i>
+                  &nbsp; +91 9576916347</li>
+          </ul>
+        
+      </div>
+      <div class="footer-last">
+          <h3 class="footer-last-name">ABOUT THE COMPANY</h3>
+          <p class="footer-last-para">The Basketball Geek provides a platform to the basketball youth to analyse their performance 
+            by NBA like metrics.</p>
+          <ul class="footer-last-icons">
+              <li><i class="fa fa-youtube" aria-hidden="true"></i></li>
+              <li><i class="fa fa-facebook-official" aria-hidden="true"></i></li>
+              <li><i class="fa fa-twitter" aria-hidden="true"></i></li>
+              <li><i class="fa fa-instagram" aria-hidden="true"></i></li>
+          </ul>
+      </div>
+      </div>
+  </footer>
+  </body>
+</html>

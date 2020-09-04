@@ -1,0 +1,64 @@
+body {
+  margin: 0;
+  padding: 0;
+  background: #000000;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to bottom, #434343, #000000);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to bottom, #434343, #000000); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: ;
+}
+.loading {
+  width: 220px;
+  height: 220px;
+  box-sizing: border-box;
+  border-radius: 50%;
+  border-top: 10px solid #1a2a6c;
+  animation: a1 2s linear infinite;
+}
+.loading::before,
+.loading::after {
+  content: "";
+  width: 220px;
+  height: 220px;
+  position: absolute;
+  left: 0;
+  top: -10px;
+  box-sizing: border-box;
+  border-radius: 50%;
+}
+
+.loading::before {
+  border-top: 10px solid #fdbb2d;
+  transform: rotate(120deg);
+}
+.loading::after {
+  border-top: 10px solid #b21f1f;
+  transform: rotate(240deg);
+}
+.loading span {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  color: aliceblue;
+  text-align: center;
+  line-height: 200px;
+  animation: a2 2s linear infinite;
+  font-size: 1.8rem;
+  font-weight: bolder;
+  font-family: Baumans;
+}
+@keyframes a1 {
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes a2 {
+  to {
+    transform: rotate(-360deg);
+  }
+}
+/*
